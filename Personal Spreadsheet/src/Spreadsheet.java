@@ -2,12 +2,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Spreadsheet {
+    //Location is first letter and first number
 
     private int letterSize;
     private int numberSize;
     private List<Table> tableList;
     private String nameOfSpreadsheet;
-    private Object[][] cells;
+    private Boolean[][] cells;//Each cell is occupied or not occupied
     public Spreadsheet()
     {
         tableList = new ArrayList<Table>();
@@ -19,7 +20,7 @@ public class Spreadsheet {
         numberSize = nS;
         nameOfSpreadsheet = nSS;
     }
-    public Spreadsheet(int lS, int nS, String nSS, Object[][] c)
+    public Spreadsheet(int lS, int nS, String nSS, Boolean[][] c)
     {
         tableList = new ArrayList<Table>();
         letterSize = lS;

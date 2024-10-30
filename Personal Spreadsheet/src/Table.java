@@ -37,7 +37,16 @@ public class Table {
         rowCount = rC;
         values = v;
     }
-
+    public Table(String letL, int numL,int cC, int rC, double[][] v, RowColumnNames rnames, RowColumnNames cnames)
+    {
+        letLoc = letL;
+        numLoc = numL;
+        columnCount = cC;
+        rowCount = rC;
+        values = v;
+        rowNames = rnames;
+        columnNames = cnames;
+    }
     public void SetValue(String let, int num, double v)
     {
         Integer letNum = map.GetMapInteger(let);
@@ -45,6 +54,27 @@ public class Table {
 
 
     }
+
+    public void SetRowNames(RowColumnNames rcn)
+    {
+        rowNames = rcn;
+    }
+
+    public void SetColumnNames(RowColumnNames rcn)
+    {
+        columnNames = rcn;
+    }
+
+    public RowColumnNames GetRowNames()
+    {
+        return rowNames;
+    }
+
+    public RowColumnNames GetColumnNames()
+    {
+        return columnNames;
+    }
+
 
     public double[][] GetValues()
     {

@@ -30,21 +30,26 @@ public class Main {
         RowColumnNames rcnTwo = new RowColumnNames(new String[]{"Grade 1", "Grade 2", "Grade 3"}, 3);
 
 
+        t.SetRowNames(rcnOne);
+        t.SetColumnNames(rcnTwo);
+
+        tTwo.SetRowNames(rcnOne);
+        tTwo.SetColumnNames(rcnTwo);
 
         //Set A1 through D4, Show A1 through D4
 
         //Temporary display for example, needs to be saved to cells
         System.out.println(spsh.GetName());
-        System.out.println("---- " + rcnTwo.names[0] + " " + rcnTwo.names[1] + " " + rcnTwo.names[2]);
-        System.out.println(rcnOne.names[0] + " "  + t.GetValues()[0][0] + " " + t.GetValues()[0][1] + " " + t.GetValues()[0][2]);
-        System.out.println(rcnOne.names[1] + " "  + t.GetValues()[1][0] + " " + t.GetValues()[1][1] + " " + t.GetValues()[1][2]);
-        System.out.println(rcnOne.names[2] + " "  + t.GetValues()[2][0] + " " + t.GetValues()[2][1] + " " + t.GetValues()[2][2]);
+        System.out.println("---- " + t.GetColumnNames().names[0] + " " + t.GetColumnNames().names[1] + " " + t.GetColumnNames().names[2]);
+        System.out.println(t.GetRowNames().names[0] + " "  + t.GetValues()[0][0] + " " + t.GetValues()[0][1] + " " + t.GetValues()[0][2]);
+        System.out.println(t.GetRowNames().names[1] + " "  + t.GetValues()[1][0] + " " + t.GetValues()[1][1] + " " + t.GetValues()[1][2]);
+        System.out.println(t.GetRowNames().names[2] + " "  + t.GetValues()[2][0] + " " + t.GetValues()[2][1] + " " + t.GetValues()[2][2]);
 
         //System.out.println(spsh.GetName());
-        System.out.println("---- " + rcnTwo.names[0] + " " + rcnTwo.names[1] + " " + rcnTwo.names[2]);
-        System.out.println(rcnOne.names[0] + " "  + tTwo.GetValues()[0][0] + " " + tTwo.GetValues()[0][1] + " " + tTwo.GetValues()[0][2]);
-        System.out.println(rcnOne.names[1] + " "  + tTwo.GetValues()[1][0] + " " + tTwo.GetValues()[1][1] + " " + tTwo.GetValues()[1][2]);
-        System.out.println(rcnOne.names[2] + " "  + tTwo.GetValues()[2][0] + " " + tTwo.GetValues()[2][1] + " " + tTwo.GetValues()[2][2]);
+        System.out.println("---- " + tTwo.GetColumnNames().names[0] + " " + tTwo.GetColumnNames().names[1] + " " + t.GetColumnNames().names[2]);
+        System.out.println(tTwo.GetRowNames().names[0] + " "  + tTwo.GetValues()[0][0] + " " + tTwo.GetValues()[0][1] + " " + tTwo.GetValues()[0][2]);
+        System.out.println(tTwo.GetRowNames().names[1] + " "  + tTwo.GetValues()[1][0] + " " + tTwo.GetValues()[1][1] + " " + tTwo.GetValues()[1][2]);
+        System.out.println(tTwo.GetRowNames().names[2] + " "  + tTwo.GetValues()[2][0] + " " + tTwo.GetValues()[2][1] + " " + tTwo.GetValues()[2][2]);
 
         //Table Two
         //Cells A2 through A6
@@ -53,13 +58,15 @@ public class Main {
         //Cells B2 through B11
         RowColumnNames answers = new RowColumnNames(new String[]{"Answer 1", "Answer 2", "Answer 3", "Answer 4"}, 4);
 
+        tThree.SetRowNames(answers);
+        tThree.SetColumnNames(tests);
         //Temporary display for example, needs to be saved to cells
         System.out.println(spshTwo.GetName());
-        System.out.println("---- " + tests.names[0] + " " + tests.names[1] + " " + tests.names[2] + " " + tests.names[3] + " " + tests.names[4]);
-        System.out.println(answers.names[0] + " "  + tThree.GetValues()[0][0] + " " + tThree.GetValues()[0][1] + " " + tThree.GetValues()[0][2] + " " + tThree.GetValues()[0][3] + " " + tThree.GetValues()[0][4]);
-        System.out.println(answers.names[1] + " "  + tThree.GetValues()[1][0] + " " + tThree.GetValues()[1][1] + " " + tThree.GetValues()[1][2] + " " + tThree.GetValues()[1][3] + " " + tThree.GetValues()[1][4]);
-        System.out.println(answers.names[2] + " "  + tThree.GetValues()[2][0] + " " + tThree.GetValues()[2][1] + " " + tThree.GetValues()[2][2] + " " + tThree.GetValues()[2][3] + " " + tThree.GetValues()[0][4]);
-        System.out.println(answers.names[3] + " "  + tThree.GetValues()[3][0] + " " + tThree.GetValues()[3][1] + " " + tThree.GetValues()[3][2] + " " + tThree.GetValues()[3][3] + " " + tThree.GetValues()[0][4]);
+        System.out.println("---- " + tThree.GetColumnNames().names[0] + " " + tThree.GetColumnNames().names[1] + " " + tThree.GetColumnNames().names[2] + " " + tests.names[3] + " " + tests.names[4]);
+        System.out.println(tThree.GetColumnNames().names[0] + " "  + tThree.GetValues()[0][0] + " " + tThree.GetValues()[0][1] + " " + tThree.GetValues()[0][2] + " " + tThree.GetValues()[0][3] + " " + tThree.GetValues()[0][4]);
+        System.out.println(tThree.GetColumnNames().names[1] + " "  + tThree.GetValues()[1][0] + " " + tThree.GetValues()[1][1] + " " + tThree.GetValues()[1][2] + " " + tThree.GetValues()[1][3] + " " + tThree.GetValues()[1][4]);
+        System.out.println(tThree.GetColumnNames().names[2] + " "  + tThree.GetValues()[2][0] + " " + tThree.GetValues()[2][1] + " " + tThree.GetValues()[2][2] + " " + tThree.GetValues()[2][3] + " " + tThree.GetValues()[0][4]);
+        System.out.println(tThree.GetColumnNames().names[3] + " "  + tThree.GetValues()[3][0] + " " + tThree.GetValues()[3][1] + " " + tThree.GetValues()[3][2] + " " + tThree.GetValues()[3][3] + " " + tThree.GetValues()[0][4]);
 
 
 
